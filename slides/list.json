@@ -1,1 +1,32 @@
-["index.md"]
+[
+    {
+        "filename": "index.md",
+        "attr": {
+            "data-transition": "convex"
+        }
+    },
+    {
+        "filename": "contents.html",
+        "attr": {
+            "data-transition": "convex"
+        }
+    },
+    {
+        "filename": "concepts/index.html",
+        "attr": {
+            "data-transition": "convex"
+        }
+    },
+    {
+        "filename": "problem/index.html",
+        "attr": {
+            "data-transition": "convex"
+        }
+    },
+    {
+        "filename": "successful-cases/index.html",
+        "attr": {
+            "data-transition": "convex"
+        }
+    }
+]
