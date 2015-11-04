@@ -1,0 +1,137 @@
+
+    <section>
+        <h1>World generation concepts</h1>
+    </section>
+
+    <section>
+        <h2>Block</h2>
+        <pre><code data-trim>
+{
+    "id": "HOSPITAL",
+    "connectors": {
+        "UP": "SOME_CONNECTOR",
+        "RIGHT": "ANOTHER_CONNECTOR",
+        "BOTTOM": "ANOTHER_ONE",
+        "LEFT": "AND_ONE_MORE"
+    },
+    "constraints": {
+        "minimumDistance": {
+            "POLICE_STATION": 5
+        },
+        "maxOccupation": 4
+    }
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>Connector</h2>
+        <pre><code data-trim>
+{
+    "id": "ALLOW_BUILDINGS",
+    "type": "whitelist",
+    "blockIds": [
+        "HOUSE",
+        "HOSPITAL",
+        "POLICE_STATION"
+    ]
+}
+    </code></pre>
+    </section>
+
+    <section>
+        <h2>World</h2>
+        <pre><code data-trim>
+{
+    "seed": 1337,
+    "strategy": "squareGrid",
+    "mapCenter": "HOSPITAL",
+    "initialMapSize": 10,
+    "bounds": {
+        "horizontal": 20,
+        "vertical": 40
+    },
+    "blocks": [],
+    "connectors": []
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>Random matrix generator</h2>
+        <pre><code data-trim>
+var randomMatrix = require('random-matrix');
+var seed1 = 123;
+var seed2 = 456;
+
+var generator1 = randomMatrix(seed1);
+var generator2 = randomMatrix(seed2);
+
+generator1.rand(0, 0) === generator1.rand(0, 0);
+generator1.rand(0, 0) !== generator2.rand(0, 0);
+generator2.rand(0, 0) === generator2.rand(0, 0);
+
+generator1.rand(1, 2) !== generator1.rand(2, 1);
+generator1.rand(1, 2) === generator2.rand(1, 2);
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>World instance generation</h2>
+        <br>
+        <h5>Iteration 0</h5>
+        <pre><code>
+
+            world.start()
+
+        </code></pre>
+        <br>
+        <h5>Iteration n + 1</h5>
+        <pre><code class="javascript">
+
+            world.getPartialMap(minX, minY, maxX, maxY)
+
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>Constraints</h2>
+        <br>
+        <div>
+            <h4>world based</h4>
+            <ul>
+                <li>initial map size</li>
+                <li>horizontal and vertical boundaries</li>
+                <li>map center</li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <h4>block based</h4>
+            <ul>
+                <li>horizontal and vertical boundaries</li>
+                <li>minimum distance to other blocks</li>
+                <li>maximum occupation</li>
+                <li>maximum occupation by percentage</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Block selection</h2>
+        <div>
+            <img width="200" height="220" src="resources/img/generation-phases.png">
+        </div>
+    </section>
+
+    <section>
+        <h2>Rules</h2>
+        <ul>
+            <li>blacklist/whitelist</li>
+            <li>maximum occupation</li>
+            <li>maximum occupation by percentage</li>
+            <li>minimum distance to other blocks</li>
+            <li class="fragment">and more!</li>
+        </ul>
+
+    </section>
