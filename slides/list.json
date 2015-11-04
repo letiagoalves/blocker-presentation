@@ -28,5 +28,14 @@
         "attr": {
             "data-transition": "convex"
         }
-    }
+    },
+    "successful-cases/common-goals.html",
+    {
+        "filename": "our-approach/index.html",
+        "attr": {
+            "data-transition": "convex"
+        }
+    },
+    "our-approach/goals.html",
+    "our-approach/content-generation-concepts.html"
 ]
