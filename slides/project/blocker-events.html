@@ -1,0 +1,35 @@
+<h2>events</h2>
+
+<section>
+    <h4>PARTIAL_MAP</h4>
+    <p>used by the client to request a part of the world</p>
+    <pre><code class="js">
+        socket.emit('PARTIAL_MAP', boundaries)
+
+        socket.on('PARTIAL_MAP', map => {
+            // use partial map data
+        })
+    </code></pre>
+</section>
+
+<section>
+    <h4>MAP</h4>
+    <p>used by the client to request the whole world</p>
+    <pre><code class="js">
+        socket.emit('MAP')
+
+        socket.on('MAP', map => {
+            // use map data
+        })
+    </code></pre>
+</section>
+
+<section>
+    <h4>UPDATED_MAP</h4>
+    <p>used by the server to broadcast changes in the world</p>
+    <pre><code class="js">
+        socket.on('MAP_UPDATED', map => {
+            // use new map data
+        })
+    </code></pre>
+</section>
