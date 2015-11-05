@@ -37,5 +37,33 @@
         }
     },
     "our-approach/goals.html",
-    "our-approach/content-generation-concepts.html"
+    "our-approach/content-generation-concepts.html",
+    "project/index.html",
+    "project/overview.html",
+    "project/rule-based-map-generator.html",
+    "project/random-matrix.html",
+    "project/blocker.html",
+    "project/blocker-events.html",
+    "project/blocker-api.html",
+    "project/blocker-server-instance.html",
+    "project/blocker-usage.html",
+    {
+        "filename": "case-study/index.html",
+        "attr": {
+            "data-transition": "convex"
+        }
+    },
+    "case-study/h1z1.html",
+    {
+        "filename": "conclusions.html",
+        "attr": {
+            "data-transition": "convex"
+        }
+    },
+    {
+        "filename": "qa.html",
+        "attr": {
+            "data-transition": "zoom"
+        }
+    }
 ]

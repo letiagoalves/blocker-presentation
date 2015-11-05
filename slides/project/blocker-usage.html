@@ -1,0 +1,32 @@
+<h2>usage</h2>
+
+<section>
+    <h4>server.js</h4>
+    <pre><code class="js">
+    var worldConfiguration = require('./path/to/world.json');
+    var blocker = require('blocker');
+
+    var port = 8000;
+    var parser = blocker.generator.parser;
+    var worldInstance = parser.parse(worldConfiguration);
+
+    var server = blocker.createServer(port, worldInstance);
+    server.start();
+    </code></pre>
+</section>
+
+<section>
+    <h4>client.js</h4>
+    <pre><code class="js">
+        var url = 'http://localhost:8000';
+        var socket = io.connect(url);
+
+        // subscribe for MAP event
+        socket.on('MAP', map => {
+            // do something
+        });
+
+        // request map
+        socket.emit('MAP');
+    </code></pre>
+</section>

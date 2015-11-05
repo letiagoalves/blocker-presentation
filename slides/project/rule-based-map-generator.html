@@ -1,0 +1,31 @@
+<section>
+    <h2>rule-based-map-generator</h2>
+</section>
+
+<section>
+    <h3>API</h3>
+    <pre><code>
+function createWorldInstance(strategy, constraints, blocks) {}
+
+function createBlockFactory(strategy) {}
+
+function createConnectorInstance(id, type, blockIds, blockClasses) {}
+
+function getStrategyFactory(strategyName) {}
+    </code></pre>
+</section>
+
+<section>
+    <h3>World configuration parser</h3>
+    <pre><code class="js">
+function parse({
+    seed: 1337,
+    strategy: 'squareGrid',
+    initialMapSize: 4,
+    blocks: [/** set of blocks **/],
+    connectors: [/** set of connectors **/]
+})
+
+// returns a world instance
+    </code></pre>
+</section>
