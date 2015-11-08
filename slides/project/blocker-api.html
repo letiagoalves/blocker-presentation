@@ -1,9 +1,16 @@
 <h2>API</h2>
 
 <section>
-    <pre><code class="js">
-        function createServer(port, worldInstance)
+    <pre><code>
+    createServer (port, worldInstance)
 
-        generator == require('rule-based-map-generator').api
+    generator
+        - createWorldInstance (strategy, constraints, blocks)
+
+        - createBlockFactory (strategy)
+
+        - createConnectorInstance (id, type, blockIds, blockClasses)
+
+        - getStrategyFactory (strategyName)
     </code></pre>
 </section>

@@ -5,72 +5,53 @@
 
     <section>
         <h2>Block</h2>
-        <pre><code data-trim>
-{
-    "id": "HOSPITAL",
-    "connectors": {
-        "UP": "SOME_CONNECTOR",
-        "RIGHT": "ANOTHER_CONNECTOR",
-        "BOTTOM": "ANOTHER_ONE",
-        "LEFT": "AND_ONE_MORE"
-    },
-    "constraints": {
-        "minimumDistance": {
-            "POLICE_STATION": 5
-        },
-        "maxOccupation": 4
-    }
-}
-        </code></pre>
+        <ul>
+            <li>identifier</li>
+            <li>sides definition (connectors)</li>
+            <li>set of classes</li>
+            <li>set of block based constraints</li>
+        </ul>
     </section>
 
     <section>
         <h2>Connector</h2>
-        <pre><code data-trim>
-{
-    "id": "ALLOW_BUILDINGS",
-    "type": "whitelist",
-    "blockIds": [
-        "HOUSE",
-        "HOSPITAL",
-        "POLICE_STATION"
-    ]
-}
-    </code></pre>
+        <ul>
+            <li>identifier</li>
+            <li>type</li>
+            <ul>
+                <li>blacklist</li>
+                <li>whitelist</li>
+            </ul>
+            <li>set of block identifiers</li>
+            <li>set of block classes</li>
+        </ul>
     </section>
 
     <section>
         <h2>World</h2>
-        <pre><code data-trim>
-{
-    "seed": 1337,
-    "strategy": "squareGrid",
-    "mapCenter": "HOSPITAL",
-    "initialMapSize": 10,
-    "bounds": {
-        "horizontal": 20,
-        "vertical": 40
-    },
-    "blocks": [],
-    "connectors": []
-}
-        </code></pre>
+        <ul>
+            <li>set of blocks</li>
+            <li>set of connectors</li>
+            <li>set of world constraints</li>
+            <li>strategy</li>
+            <li>seed</li>
+        </ul>
     </section>
 
     <section>
         <h2>World instance generation</h2>
         <br>
         <h5>Iteration 0</h5>
-        <pre><code>
+        <pre><code class="javascript">
 
-            world.start()
+    world.start ()
 
         </code></pre>
         <br>
         <h5>Iteration n + 1</h5>
         <pre><code class="javascript">
 
-            world.getPartialMap(minX, minY, maxX, maxY)
+    world.getPartialMap (minX, minY, maxX, maxY)
 
         </code></pre>
     </section>
@@ -81,19 +62,19 @@
         <div>
             <h4>world based</h4>
             <ul>
-                <li>initial map size</li>
-                <li>horizontal and vertical boundaries</li>
-                <li>map center</li>
+                <li class="fragment">initial map size</li>
+                <li class="fragment">horizontal and vertical boundaries</li>
+                <li class="fragment">map center</li>
             </ul>
         </div>
         <br>
         <div>
             <h4>block based</h4>
             <ul>
-                <li>horizontal and vertical boundaries</li>
-                <li>minimum distance to other blocks</li>
-                <li>maximum occupation</li>
-                <li>maximum occupation by percentage</li>
+                <li class="fragment">horizontal and vertical boundaries</li>
+                <li class="fragment">minimum distance to other blocks</li>
+                <li class="fragment">maximum occupation</li>
+                <li class="fragment">maximum occupation by percentage</li>
             </ul>
         </div>
     </section>
