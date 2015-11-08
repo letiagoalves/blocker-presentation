@@ -1,11 +1,119 @@
 <section>
     <h2>H1Z1</h2>
-    <p>[insert here world main characteristics]</p>
+    <ul>
+        <li>open-world survival MMO</li>
+        <li>explore to collect resources</li>
+        <li>survive enemies and other players</li>
+        <li>take advantage of buildings</li>
+        <li>points of interest are well distributed</li>
+    </ul>
 </section>
 
 <section>
     <h2>world definition</h2>
-    <p>[insert here the world we want to build]</p>
+</section>
+
+<section>
+    <h3>blocks</h3>
+    <ul>
+        <li>forest</li>
+        <li>vehicles spawn</li>
+        <li>gas station</li>
+        <li>police station</li>
+        <li>water well</li>
+        <li>building</li>
+    </ul>
+</section>
+
+<section>
+    <h3>connectors</h3>
+    <ul>
+        <li>ALLOW_ALL</li>
+        <ul>
+            <li>whitelist</li>
+            <li>allows all blocks</li>
+        </ul>
+        <br>
+        <li>ALLOW_FOREST</li>
+        <ul>
+            <li>whitelist</li>
+            <li>allows only forest blocks</li>
+        </ul>
+    </ul>
+</section>
+
+<section>
+    <h3>world constraints</h3>
+    <ul>
+        <li>initial size: 10 units</li>
+        <li>horizontal boundaries: 40 units</li>
+        <li>vertical boundaries: 40 units</li>
+        <li>map center: vehicles spawn</li>
+    </ul>
+</section>
+
+<section>
+    <h3>block constraints</h3>
+    <br>
+    <h4>vehicles spawn</h4>
+    <ul>
+        <li>minimum distance</li>
+        <ul>
+            <li>10 units from other vehicles spawn blocks</li>
+            <li>7 units from gas station blocks</li>
+        </ul>
+    </ul>
+</section>
+
+<section>
+    <h3>block constraints</h3>
+    <br>
+    <h4>gas station</h4>
+    <ul>
+        <li>maximum occupation percentage: 1%</li>
+        <li>minimum distance</li>
+        <ul>
+            <li>5 units from other gas station blocks</li>
+        </ul>
+    </ul>
+</section>
+
+<section>
+    <h3>block constraints</h3>
+    <br>
+    <h4>water well</h4>
+    <ul>
+        <li>maximum occupation percentage: 3%</li>
+        <li>minimum distance</li>
+        <ul>
+            <li>4 units from other water well blocks</li>
+            <li>6 units from building blocks</li>
+        </ul>
+    </ul>
+</section>
+
+<section>
+    <h3>block constraints</h3>
+    <br>
+    <h4>police station</h4>
+    <ul>
+        <li>minimum distance</li>
+        <ul>
+            <li>14 units from other police station blocks</li>
+        </ul>
+    </ul>
+</section>
+
+<section>
+    <h3>block constraints</h3>
+    <br>
+    <h4>building</h4>
+    <ul>
+        <li>minimum distance</li>
+        <ul>
+            <li>5 units from other building blocks</li>
+        </ul>
+    </ul>
 </section>
 
 <section>
