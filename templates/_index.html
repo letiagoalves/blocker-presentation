@@ -46,14 +46,35 @@
                 left: 0;
             }
 
-            #triangle-bottomleft {
+            #triangle-topleft {
                 position: fixed;
-                bottom: 0;
+                top: 0;
                 left: 0;
                 width: 0;
                 height: 0;
-                border-bottom: 80px solid #a33f1f;
-                border-right: 80px solid transparent;
+                border-top: 48px solid #a33f1f;
+                border-right: 48px solid transparent;
+            }
+
+            #triangle-topright {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 0;
+                height: 0;
+                border-top: 48px solid #a33f1f;
+                border-left: 48px solid transparent;
+            }
+
+            .slide-number {
+                left: 15px !important;
+                font-size: 48px !important;
+            }
+
+            img.reset {
+                background-color: transparent !important;
+                border-width: 0 !important;
+                box-shadow: 0 0 0 transparent !important;
             }
 
         </style>
@@ -61,7 +82,8 @@
 
     <body>
 
-        <div id="triangle-bottomleft"></div>
+        <div id="triangle-topleft"></div>
+        <div id="triangle-topright"></div>
         <div id="top-brand"></div>
 
         <div class="reveal">
