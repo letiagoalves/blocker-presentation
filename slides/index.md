@@ -1,10 +1,8 @@
-### A framework for real time MMO game content generation
+### A Framework for Massively Multiplayer Online Game Content Generation
 ___
 Tiago Alves
-1080757@isep.ipp.pt
-___
-Mestrado em Engenharia Informática
 
-Instituto Superior de Engenharia do Porto
+Jorge Coelho
 ___
-<img width="200" height="80" alt="ISEP" src="resources/img/isep.jpg">
+30th IEEE International Conference on Advanced Information Networking and Applications (AINA-2016)
+___
